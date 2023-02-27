@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Page</title>
+</head>
+<body>
+    <h1>Example Page</h1>
+    <p>The value of the parameter is <span id="param-value"></span>.</p>
+
+    <script>
+        // Get the value of the "param" parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramValue = urlParams.get('param');
+
+        // Set the text of the <span> element to the parameter value
+        const span = document.getElementById('param-value');
+        span.textContent = paramValue;
+    </script>
+</body>
+</html>
